@@ -1,0 +1,27 @@
+{
+  "name": "MMM-UKMOWeatherWarnings",
+  "version": "1.0.0",
+  "description": "Magic Mirror 2 Module to display weather warnings from the UK Met Office",
+  "main": "MMM-UKMOWeatherWarnings.js",
+  "author": "",
+  "license": "MIT",
+  "repository": {
+            "type": "git",
+            "url": "git+https://github.com/maloakes/MMM-UKMOWeatherWarnings"
+  },
+  "keywords": [
+            "magic mirror",
+            "smart mirror",
+            "weather",
+            "warnings",
+            "module",
+            "UK Met Office"
+  ],
+  "author": "Malcolm Oakes",
+  "contributors": "https://github.com/maloakes/MMM-UKMOWeatherWarnings/graphs/contributors",
+  "license": "MIT",
+  "bugs": {
+            "url": "https://github.com/maloakes/MMM-UKMOWeatherWarnings/issues"
+  },
+"homepage": "https://github.com/maloakes/MMM-UKMOWeatherWarnings#readme"
+}

@@ -1,0 +1,28 @@
+{% if warnings %}
+  {% if not config.backgroundMode %}
+    <div class="small">{{warnings.title}}</div>
+    {% if warnings.items %}
+        <table class="small">
+            {% for w in warnings.items %}
+                <tr >
+                    <td class="bright warning-icon">
+			            <i class="fa fa-exclamation-triangle"
+            		    {% if config.colored %}
+				            style="color:{{w.getColor()}}"> </i>
+    			        {% else %}
+				            </i>
+				            <sup>{{w.getLevelCode()}}</sup>
+			            {% endif %}
+			        </td>
+                    <td class="bright warn-type">{{w.getTypeTc()}}</td>
+                    <td class="warn-val">{{w.getValidity()}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <div class="xsmall dimmed">{{"NOWARNS" | translate}}</div>
+    {% endif %}
+  {% endif %}
+{% else %}
+  {{"LOADING" | translate}}
+{% endif %}
