@@ -5,10 +5,10 @@
  *
  * MIT Licensed.
  */
-const FeedMe = require('feedme')
-const http = require('http')
-const moment = require('moment')
-const fs = require('fs')
+const FeedMe = require("feedme")
+const http = require("http")
+const moment = require("moment")
+const fs = require("fs")
 var NodeHelper = require("node_helper");
 
 module.exports = NodeHelper.create({
@@ -49,9 +49,9 @@ module.exports = NodeHelper.create({
 		  var parser = new FeedMe(true)
 
 		  res.pipe(parser)
-		  parser.on('end', () => {
+		  parser.on("end", () => {
 		    res = parser.done()
-				self.sendSocketNotification('MMM-UKMOWeatherWarnings-WARNINGS-RESULT', res);
+				self.sendSocketNotification("MMM-UKMOWeatherWarnings-WARNINGS-RESULT", res);
 
 		  })
 		})

@@ -39,12 +39,12 @@ Module.register("MMM-UKMOWeatherWarnings", {
 		this.loaded = false;
 
 		//Do this once first
-		self.sendSocketNotification('MMM-UKMOWeatherWarnings-WARNINGS-REQ', this.getUrl());
+		self.sendSocketNotification("MMM-UKMOWeatherWarnings-WARNINGS-REQ", this.getUrl());
 
 
 		// Schedule update timer.
 		setInterval(function() {
-			self.sendSocketNotification('MMM-UKMOWeatherWarnings-WARNINGS-REQ', self.getUrl());
+			self.sendSocketNotification("MMM-UKMOWeatherWarnings-WARNINGS-REQ", self.getUrl());
 			self.updateDom();
 		}, this.config.updateInterval);
 	},
@@ -70,7 +70,7 @@ Module.register("MMM-UKMOWeatherWarnings", {
 		nextLoad = nextLoad ;
 		var self = this;
 		setTimeout(function() {
-			self.sendSocketNotification('"MMM-UKMOWeatherWarnings-WARNINGS-REQ', null);
+			self.sendSocketNotification("\"MMM-UKMOWeatherWarnings-WARNINGS-REQ", null);
 		}, nextLoad);
 	},
 
@@ -78,8 +78,8 @@ Module.register("MMM-UKMOWeatherWarnings", {
 
 	getScripts: function() {
 		return [
-			'warningsobject.js',
-			'warningitemobject.js',
+			"warningsobject.js",
+			"warningitemobject.js",
 		];
 	},
 

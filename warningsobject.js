@@ -9,7 +9,7 @@
  * This will contain 0 or more WarningItemObjects.
  */
 
- class WarningsObject {
+class WarningsObject {
 	constructor(warningsResult) {
 
 		this.title = warningsResult.title
@@ -35,7 +35,7 @@
 		}
 	}
 
-  /*
+	/*
 	 * get colour (severity) of item
 	 */
 	getColor(idx) {
@@ -63,7 +63,7 @@
 		// get warnings that are now current
 		// return level and info of highest level
 
-		let ordArray = this.getMaxPeriodWarn('current', delta)
+		let ordArray = this.getMaxPeriodWarn("current", delta)
 
 		// just return level and type (title case)
 		let res = {}
@@ -75,7 +75,7 @@
 		return res
 	}
 
-  /*
+	/*
 	 * determine the warnings for the required period
 	 * parameter:
 	 *  mode: current - active now
@@ -89,36 +89,36 @@
 
 	    if (this.items) {
 
-		let newArray = null
+			let newArray = null
 
-		switch (mode) {
-			case 'current':
+			switch (mode) {
+			case "current":
 				// get warnings that are now current
 				// return level and info of highest level
 			  newArray = this.items.filter(function (el) {
-		  		return el.validFrom.isBefore(moment().add(offset, 'minutes')) && el.validTo.isAfter(moment())
+		  		return el.validFrom.isBefore(moment().add(offset, "minutes")) && el.validTo.isAfter(moment())
 				});
 				break;
-			case 'today':
+			case "today":
 				// get warnings active from now until end of day
 				// return highest
 				// Vf < Ed & Vt > Nw
 				newArray = this.items.filter(function (el) {
-				  return el.validFrom.isBefore(moment().endOf('day')) && el.validTo.isAfter(moment())
+				  return el.validFrom.isBefore(moment().endOf("day")) && el.validTo.isAfter(moment())
 				});
 				break;
-			case 'day':
+			case "day":
 				// get warnings active during the day
 				// return highest
 				// Vf < Ed & Vt > Sd
 				newArray = this.items.filter(function (el) {
-				  return el.validFrom.isBefore(moment().add(offset, 'days').endOf('day')) && el.validTo.isAfter(moment().add(offset, 'days').startOf('day'))
+				  return el.validFrom.isBefore(moment().add(offset, "days").endOf("day")) && el.validTo.isAfter(moment().add(offset, "days").startOf("day"))
 				});
 				break;
-		}
-		return this.sortByLevel(newArray)
+			}
+			return this.sortByLevel(newArray)
 	    } else {
-		return null
+			return null
 	    }
 	}
 
@@ -130,11 +130,11 @@
 		// & get warnings the following days
 		// return highest level for each day
 		let fcArray = []
-		let tmp = this.getMaxPeriodWarn('today', null)
+		let tmp = this.getMaxPeriodWarn("today", null)
 		fcArray.push(tmp && tmp.length > 0 ? tmp[0] : null)
 
 		for (let offset = 1; offset < listSize; offset++) {
-		  let tmp = this.getMaxPeriodWarn('day', offset)
+		  let tmp = this.getMaxPeriodWarn("day", offset)
 		  fcArray.push(tmp && tmp.length > 0 ? tmp[0] : null)
 		}
 
@@ -148,13 +148,13 @@
 		return res
 	}
 
-  /*
+	/*
 	 * sort the list by level
 	 */
 	sortByLevel(warnArray) {
 		let ord = this.ordering
 		var ordArray = warnArray.sort( function(a, b) {
-				return (ord[a.level] - ord[b.level]) || a.type.localeCompare(b.type);
+			return (ord[a.level] - ord[b.level]) || a.type.localeCompare(b.type);
 		});
 
 		return ordArray
@@ -166,7 +166,7 @@
 	 */
 	buildOrdering(warnArray) {
 	  this.ordering = {} // map for efficient lookup of sortIndex
-	  let sortOrder = ['RED','AMBER','YELLOW'];
+	  let sortOrder = ["RED","AMBER","YELLOW"];
 	  for (let i=0; i<sortOrder.length; i++) {
 	    this.ordering[sortOrder[i]] = i;
 	  }

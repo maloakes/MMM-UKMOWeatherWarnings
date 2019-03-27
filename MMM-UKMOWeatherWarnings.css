@@ -6,27 +6,27 @@
  * MIT Licensed.
  */
 
- .MMM-UKMOWeatherWarnings .fa-home {
-   font-size: 75%;
-   line-height: 65px;
-   display: inline-block;
-   -ms-transform: translate(0, -3px); /* IE 9 */
-   -webkit-transform: translate(0, -3px); /* Safari */
-   transform: translate(0, -3px);
- }
+.MMM-UKMOWeatherWarnings .fa-home {
+  font-size: 75%;
+  line-height: 65px;
+  display: inline-block;
+  -ms-transform: translate(0, -3px); /* IE 9 */
+  -webkit-transform: translate(0, -3px); /* Safari */
+  transform: translate(0, -3px);
+}
 
- .MMM-UKMOWeatherWarnings .warning-icon {
-   padding-right: 10px;
-   text-align: center;
- }
+.MMM-UKMOWeatherWarnings .warning-icon {
+  padding-right: 10px;
+  text-align: center;
+}
 
- .MMM-UKMOWeatherWarnings .warn-type {
-   padding-left: 20px;
-   padding-right: 0;
- }
+.MMM-UKMOWeatherWarnings .warn-type {
+  padding-left: 20px;
+  padding-right: 0;
+}
 
- .MMM-UKMOWeatherWarnings .warn-val {
-   font-size: 75%;
-   padding-left: 20px;
-   padding-right: 0;
- }
+.MMM-UKMOWeatherWarnings .warn-val {
+  font-size: 75%;
+  padding-left: 20px;
+  padding-right: 0;
+}
