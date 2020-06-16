@@ -24,6 +24,7 @@ Module.register("MMM-UKMOWeatherWarnings", {
 		useTestData: false,
 		testUrl: null,
 		backgroundMode: false,
+		hideOnNoWarnings: false,
 		delta: 0, //minutes
 	},
 

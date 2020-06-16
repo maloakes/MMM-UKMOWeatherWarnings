@@ -45,6 +45,7 @@ var config = {
 | `useTestData`       | *Optional* Whether to use test data instaed of the live feed <br><br>**Type:** `boolean` <br>Default `false`
 | `testUrl`           | *Optional* URL of the test data file  <br><br>**Type:** `string` <br>e.g. `http://localhost:8080/modules/MMM-UKMOWeatherWarnings/public/warns.json`
 | `backgroundMode`    | *Optional* Whether to run in background mode, only sending notifications <br><br>**Type:** `boolean` <br>Default `false`
+| `hideOnNoWarnings`  | *Optional* Whether to hide the module if there are no warnings found <br><br>**Type:** `boolean` <br>Default `false`
 | `delta`             | *Optional* Look ahead delta for current warnings <br><br>**Type:** `int`(minutes) <br>0
 
 #### Regions
