@@ -23,7 +23,7 @@ var config = {
             config: {
                 // See below for configurable options
                 region: 'sw',
-                apiBase: 'http://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/',
+                apiBase: 'https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/',
         }
     ]
 }
@@ -33,7 +33,7 @@ var config = {
 
 | Option              | Description
 |-------------------- |-----------
-| `apiBase`           | *Required* UKMO Weather Warnings feed URL <br><br>**Type:** `string` <br>e.g. `http://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/`
+| `apiBase`           | *Required* UKMO Weather Warnings feed URL <br><br>**Type:** `string` <br>e.g. `https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/`
 | `region`            | *Required* UKMO Weather Warnings Region <br><br>**Type:** `string` <br>See table below, e.g. `sw`
 | `updateInterval`    | *Optional* Update interval <br><br>**Type:** `int`(milliseconds) <br>Default 900000 milliseconds (15 minutes)
 | `retryDelay`        | *Optional* Retry delay <br><br>**Type:** `int`(milliseconds) <br>Default 5000 milliseconds (5 seconds)
