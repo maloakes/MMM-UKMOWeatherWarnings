@@ -6,7 +6,7 @@
  * MIT Licensed.
  */
 const FeedMe = require("feedme")
-const http = require("http")
+const https = require("https")
 const moment = require("moment")
 const fs = require("fs")
 var NodeHelper = require("node_helper");
@@ -41,7 +41,7 @@ module.exports = NodeHelper.create({
 	warningsRequest: function(url) {
 		self = this
 
-		http.get(url, (res) => {
+		https.get(url, (res) => {
 		  if (res.statusCode != 200) {
 		    console.error(new Error(`status code ${res.statusCode}`))
 		    return
