@@ -6,7 +6,7 @@
  * MIT Licensed.
  */
 const FeedMe = require("feedme")
-const http = require("http")
+const https = require("https")
 const moment = require("moment")
 const fs = require("fs")
 var NodeHelper = require("node_helper");
