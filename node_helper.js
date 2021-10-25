@@ -41,7 +41,7 @@ module.exports = NodeHelper.create({
 	warningsRequest: function(url) {
 		self = this
 
-		http.get(url, (res) => {
+		https.get(url, (res) => {
 		  if (res.statusCode != 200) {
 		    console.error(new Error(`status code ${res.statusCode}`))
 		    return
